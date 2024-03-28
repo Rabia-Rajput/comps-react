@@ -2,14 +2,12 @@ import Button from "./Button";
 
 function App (){
     return <div>
-        <div><Button>Click me </Button></div>
-        <div><Button>Buy now!</Button></div>
-        <div><Button></Button></div>
-        <div><Button></Button></div>
-        <div><Button></Button></div>
-        <div><Button></Button></div>
-        <div><Button></Button></div>
-        <div><Button></Button></div>
+        <div><Button success rounded outline>Click me </Button></div>
+        <div><Button danger outline>Buy now!</Button></div>
+        <div><Button warning>See Data</Button></div>
+        <div><Button secondary>Hide Ads</Button></div>
+        <div><Button primary>Something!</Button></div>
+       
 
     </div>;
 }
