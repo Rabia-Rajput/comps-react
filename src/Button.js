@@ -13,7 +13,7 @@ function Button({
     // if ( primary && secondary){
     //     throw new Error('only one of primary and secondary shloud be provided')
     // }
-    return <button className='bg-red-500'>{children}</button>;
+    return <button className='px-3 py-1.5 border border-blue-600 bg-blue-500 text-white'>{children}</button>;
 }
 Button.propTypes ={
     checkVariationValue: ({primary,secondary,
