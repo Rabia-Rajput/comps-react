@@ -19,9 +19,11 @@ const Dropdown = ({options, selection , onSelect } ) => {
        </div>
 
     });
+    
   return (
     <div>
-        <div onClick={ handleClick }>Select...</div>
+        <div onClick={ handleClick }>
+            {selection?.label || 'Select...'}</div>
        { isOpen && <div>{renderedOptions} </div>}
     </div>
   );
