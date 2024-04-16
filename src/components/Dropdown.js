@@ -7,7 +7,10 @@ const Dropdown = ({options, selection , onSelect } ) => {
       // OR //  isOpen( (currentIsOpen) => !currentIsOpen);
     };
     const handleOptionClick=(option)=>{
+        // close dropdown
         setIsOpen(false);
+        //what option did the user click on?
+        onSelect(option);
 
     };
     const renderedOptions=options.map((option)=>{
