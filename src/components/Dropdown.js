@@ -4,11 +4,19 @@ import Panel from "./Panel";
 
 const Dropdown = ({ options, selection, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const divEl =useRef();
   useEffect(()=>{
     const handler=(event)=>{
-        console.log(event.target);
+      if(!divEl.current.contains(event.target)){
+        setIsOpen(false);
+      }
+        
     };
-    document.addEventListener('click', handler, true)
+    document.addEventListener('click', handler, true);
+    return ()=>{ //clean Up function
+      document.removeEventListener('click', handler);
+
+    };
 
   },[]);
   const handleClick = () => {
@@ -34,7 +42,7 @@ const Dropdown = ({ options, selection, onSelect }) => {
   });
 
   return (
-    <div className="w-48 relative">
+    <div ref={divEl} className="w-48 relative">
       <Panel
         className="flex justify-between items-center cursor-pointer "
         onClick={handleClick}
