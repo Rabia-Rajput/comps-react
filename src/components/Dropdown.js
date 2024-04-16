@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const Dropdown = ({options} ) => {
+const Dropdown = ({options, selection , onSelect } ) => {
     const [isOpen, setIsOpen]= useState(false);
     const handleClick=()=>{
         setIsOpen(!isOpen);
