@@ -23,8 +23,7 @@ function Accordion({ items }) {
     const isExpanded = index === expandedIndex;
     const icon = (
       <span className="text-2xl">
-        {" "}
-        {isExpanded ? <GoChevronDown /> : <GoChevronLeft />}{" "}
+        {isExpanded ? <GoChevronDown /> : <GoChevronLeft />}
       </span>
     );
 
