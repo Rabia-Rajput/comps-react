@@ -1,8 +1,15 @@
 
 
-const Link = () => {
+const Link = ({to, children}) => {
+    const handleClick=(event)=>{
+        event.preventDefault();
+
+
+    };
   return (
-    <div>Link</div>
+    <a onClick={handleClick}> {children}
+
+    </a>
   )
 }
 
