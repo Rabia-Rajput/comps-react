@@ -2,7 +2,7 @@
 import {createContext, useEffect, useState} from 'react'
 
 const NavigationContext = createContext();
-function NavigationProvider ({Children}) {
+function NavigationProvider ({children}) {
 const [currentPath, setCurrentPath]= useState(window.location.pathname);
 useEffect(()=>{
     const handler=()=>{
@@ -25,7 +25,7 @@ const navigate=(to)=>{ //to=== /accordion etc(path)
 
     return( <NavigationContext.Provider value={{currentPath, navigate }}>
       
-        {Children}
+        {children}
     </NavigationContext.Provider>
     );
 }
