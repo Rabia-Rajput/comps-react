@@ -6,6 +6,7 @@ function NavigationProvider ({Children}) {
 const [currentPath, setCurrentPath]= useState(window.location.pathname);
 useEffect(()=>{
     const handler=()=>{
+        setCurrentPath(window.location.pathname);
 
 
     };
