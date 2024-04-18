@@ -7,6 +7,13 @@ const [currentPath, setCurrentPath]= useState(window.location.pathname);
 useEffect(()=>{
     const handler=()=>{
 
+
+    };
+    window.addEventListener('popstate', handler);
+
+    return ()=>{
+        window.removeEventListener('popstate', handler);
+
     };
 },[]);
 
