@@ -9,7 +9,7 @@ const Dropdown = ({ options, selection, onSelect }) => {
     const handler=(event)=>{
       if(!divEl.current){
         return;
-      };
+      }
 
       if(!divEl.current.contains(event.target)){
         setIsOpen(false);
