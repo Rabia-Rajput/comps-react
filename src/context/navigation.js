@@ -17,9 +17,14 @@ useEffect(()=>{
 
     };
 },[]);
+const navigate=(to)=>{ //to=== /accordion etc(path)
+    window.history.pushState({},'', to);
+    setCurrentPath(to);
 
-    return( <NavigationContext.Provider value={{ }}>
-        {currentPath}
+};
+
+    return( <NavigationContext.Provider value={{currentPath, navigate }}>
+      
         {Children}
     </NavigationContext.Provider>
     );
