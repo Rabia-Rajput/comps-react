@@ -1,18 +1,21 @@
-
 import { useContext } from "react";
 import NavigationContext from "../context/navigation";
 
-function Link  ( { to, children} ){
-    const {navigate} = useContext(NavigationContext);
-    const handleClick=(event)=>{
-        event.preventDefault();
+function Link({ to, children }) {
+  const { navigate } = useContext(NavigationContext);
+  const handleClick = (event) => {
+    if (event.metaKey || event.ctrlKey) {
+      return;
+    }
 
-        navigate(to);
+    event.preventDefault();
 
-
-    };
+    navigate(to);
+  };
   return (
-    <a onClick={handleClick}> {children} </a>
+    <a href={to} onClick={handleClick}>
+      {children}
+    </a>
   );
 }
 
