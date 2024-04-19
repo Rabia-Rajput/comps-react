@@ -11,7 +11,7 @@ function App  () {
          <AccordionPage/>   
             
              </Route>
-             <Route path='/dropdown'>
+             <Route path='/'>
          <DropdownPage/>   
             
              </Route>
