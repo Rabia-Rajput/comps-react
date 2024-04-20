@@ -1,36 +1,30 @@
 
 
 const Table = ({data}) => {
+    const renderedRows=data.map((fruit)=>{
+return(
+    <tr className="border-b" key={fruit.name}>
+       <td className="p-3" >{fruit.name} </td> 
+       <td className="p-3">
+       <div className={`p-3 m-2 ${fruit.color}`} >
+
+       </div>
+         </td> 
+       <td className="p-3" >{fruit.score} </td> 
+    </tr>
+)
+    });
   return (
-    <table>
+    <table className="table-auto border-spacing-2">
       <thead>
-        <tr>
+        <tr className="border-b-2" >
            <th>Fruit</th> 
            <th>color</th> 
            <th>Score</th> 
         </tr>
       </thead>
       <tbody>
-        <tr>
-            <td>Apple</td>
-            <td>color-box</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>Orange</td>
-            <td>color-box</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>Banana</td>
-            <td>color-box</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>Lime</td>
-            <td>color-box</td>
-            <td>4</td>
-        </tr>
+      {renderedRows}
       </tbody>
         </table>
   )
