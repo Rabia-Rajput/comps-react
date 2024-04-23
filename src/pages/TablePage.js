@@ -13,7 +13,9 @@ const TablePage = () => {
   <div className=  {`p-3 m-2 ${fruit.color}`}></div>
   },
     {label:'Score',render:(fruit)=>fruit.score,
-  header:()=> <th >Score</th> },
+  
+
+   },
 
   ];
   const keyFn = (fruit)=>{
