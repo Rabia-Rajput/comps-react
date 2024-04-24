@@ -9,7 +9,7 @@ const Table = ({ data, config, keyFn }) => {
   });
   const renderedRows = data.map((rowData) => {
     const renderedCells = config.map((column) => (
-      <td className="p-2" key={column.label}>
+      <td className="p-3" key={column.label}>
         {column.render(rowData)}
       </td>
     ));
