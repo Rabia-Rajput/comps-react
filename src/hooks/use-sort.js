@@ -37,7 +37,7 @@ const useSort = (data, config) => {
     });
   }
 
-  return {sortBy, sortOrder, sortedData, setSortColumn};
+  return { sortBy, sortOrder, sortedData, setSortColumn };
 };
 
 export default useSort;
